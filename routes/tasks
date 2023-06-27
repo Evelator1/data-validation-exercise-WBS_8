@@ -1,0 +1,11 @@
+const express = require("express");
+const tasksRouter = express.Router();
+const { createTask, getTasks } = require("../controllers/tasks");
+
+tasksRouter.get("/", getTasks);
+
+tasksRouter.post("/", createTask);
+
+// booksRouter.delete("/:id", deleteBook);
+
+module.exports = tasksRouter;
